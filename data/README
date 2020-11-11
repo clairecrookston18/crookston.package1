@@ -1,0 +1,5 @@
+*A one-sentence description of the dataset : "measurements.csv" is the first sheet of the excel file "ORIGDATAcorrect.xls" that includes specimen population, SVL, body measurements and elevation/locality data.
+
+*Dimensions of dataset : 437 rows x 17 columns
+
+*Column data types : specimen = col_double(), population = col_character(), SVL = col_double(), HdLngth = col_double(), HdWdth = col_double(), HdDpth = col_double(), EyeNost = col_double(), Gape = col_double(), TrunkLgth = col_double(), TrunkWdth = col_double(), `3rdtoehind` = col_double(), site = col_character(), elevation = col_character(), long.deg = col_double(), long.mins = col_double(), lat.deg = col_double(), lat.mins = col_double()

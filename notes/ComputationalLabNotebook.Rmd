@@ -1,0 +1,44 @@
+---
+title: "Computational Lab Notebook"
+author: "Claire Crookston"
+date: "9/23/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## September 23, 2020
+
+*Goal:* Work on plotting head length and width and cleaning up/organizing data.
+
+*Worked:*
+
+*Did not work:*
+```{r}
+#Created pipe to make new object containing only specimen, population, HdLngth and HdWdth columsn of "measurements".
+
+HdL_x_HdW <- measurements %>% 
+select(specimen, population, HdLngth, HdWdth) %>% 
+group_by(specimen)
+HdL_x_HdW
+```
+
+```{r}
+#Wanted to determine if any of the specimen numbers were not unique (replicated) 
+unique(HdL_x_HdW$specimen)
+#looks like there are 425 unique specimen IDs, but using
+str(HdL_x_HdW)
+#There are 437 total entries of specimen so come must be repeated.
+```
+
+```{r}
+#How do I get rid of the repeated specimen values? 
+```
+
+##October 5, 2020
+
+Trying revision management for the first time. 
+
+First push worked
