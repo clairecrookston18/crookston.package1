@@ -1,0 +1,62 @@
+---
+title: "Tutorial"
+author: "Claire Crookston"
+date: "11/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+How to install the R package:
+
+```{r, eval=FALSE}
+devtools::install_github("clairecrookston18/crookston.package1")
+```
+
+How to lead the package:
+
+```{r}
+library(crookston.package1)
+```
+
+## Taking the mean head volume for each population of Gyrinophilus porphyriticus.
+
+This function is important to use on data that is both categorical and numeric which list different morphological values by population and specimen ID. It allows the data of multiple columns (HdLgnth, HdWdth and HdDpth (mm)) to be used to calculate head volume and to take the mean so that the differences between populations (BA, BR, CN, CS, NH, and PD) can be analyzed and hypotheses made about their relationships and microevolution. This .csv file is modified from the original created by Christopher K. Beachy and Dean C. Adams which is used in the published article "Historical Explanationsf the Phenotypic Variation in the Plethodontid Salamander 'Gyrinophilus porphyriticus'".
+
+The input for this function (x) is specific to the ORIGDATAcorrect.csv file which is read in as the 'measurements' dataframe or tibble. The output is a tibble with two columns: the first is the population and the second is the mean head volume for that population in millimeters squared.
+
+```{r}
+library(tidyverse)
+library(assertthat)
+measurements <- read_csv("../inst/extdata/ORIGDATAcorrect.csv")
+mean_pop_head_vol(measurements)
+```
+
+## Plotting coordinate data onto a map of sampling sites of G. porphyriticus.
+
+This function allows for the manipulation of the ORIGDATAcorrect.csv so that the columns 'population', 'long.deg', 'long.mins', 'lat.deg', and lat.mins' can be useable in the st_as_sf() function. Once the longitude and latitude parts of the coordinates are in the proper format and as sf objects, they can be used in the function geom_sf and coord_sf to plot the data to a map rendered by the package "rnaturalearth". This allows for visualization of the sampling sites used to gather morphological data of various populations of the Spring salamander, 'Gyrinophilus porphyriticus' from North Carolina. This .csv file is modified from the original created by Christopher K. Beachy and Dean C. Adams which is used in the published article "Historical Explanationsf the Phenotypic Variation in the Plethodontid Salamander 'Gyrinophilus porphyriticus'". 
+
+The input for this function (x) is again the 'measurements' object made by using the read_csv() function for ORIGDATAcorrect.csv. This dataset is a tibble or data frame with the column names listed in the paragraph above. The output is a plot of the map called 'map_plot1' which is a ggplot. 
+
+```{r}
+library(tidyverse)
+library(assertthat)
+library(na.tools)
+measurements <- read_csv("../inst/extdata/ORIGDATAcorrect.csv")
+plot_map(measurements)
+```
+
+## Building a phylogenetic tree of the tribes within Plethodontidae using the Open Tree of Life
+
+This function does not use the ORIGDATAcorrect.csv dataset, however, it is able to take data available from the package "rotl" to find taxa to plot to a phyogenetic tree. This is a very basic use of that package that shows the evolutionary relationships between the Plethodontid genera: Gyrinophilus, Eurycea, Desmognathus, Plethodon, Hemidactylium, and Bolitoglossa. This function can be used for any list of taxa, but here it is particularly those 6 genera listed above.
+
+The input for this function (x) is a list of genera called 'taxa'. The output is 'plot_sala_tree' which is a phylogram.
+
+```{r}
+library(rotl)
+library(assertthat)
+taxa <- c("Gyrinophilus", "Eurycea", "Desmognathus", "Plethodon", "Hemidactylium", "Bolitoglossa")
+build_phylo(taxa)
+```

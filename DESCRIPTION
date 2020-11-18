@@ -6,7 +6,7 @@ Authors@R:
            family = "Crookston",
            role = c("aut", "cre"),
            email = "claire.crookston@selu.edu")
-Description: This is an R package that allows the user to take a dataset (a tibble or data frame).
+Description: This is an R package that allows the user to take a dataset (a tibble or data frame) that has specific column names to perform a few different
 Depends: 
   R (> 3.0.0)
 Imports:

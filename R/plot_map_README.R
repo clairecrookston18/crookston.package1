@@ -1,13 +1,21 @@
-#'plot_locality_map
+#'plot_map
 
 #'This function plots sample sites and population data onto a map to visualize population 
-#'distributions of Gyrynophilus porphyriticus. I did not have enough time to add the degree minutes for higher resolution.
+#'distributions of Gyrynophilus porphyriticus.
 
 #' @param x name of tibble 'measurements' (tibble, no default)
-#' @return map_plot1
+#' @return map_plot1 the plot of the map with populations as red diamonds
+#' @importFrom ggplot2 geom_sf
+#' @importFrom ggplot2 coord_sf
+#' @importFrom magrittr %>%  
+#' @importFrom na.tools na.rm
+#' @importFrom sf st_as_sf
+#' @importFrom rnaturalearth ne_states
+#' @importFrom assertthat assert_that
+#' @export
  
 plot_map <- function(x) {
-  assert_that(is.data.frame(x))
+  assertthat::assert_that(is.data.frame(x))
   x = measurements
   pop_coords <- measurements %>% 
     select(population, long.deg, long.mins, lat.deg, lat.mins)
@@ -46,7 +54,7 @@ plot_map <- function(x) {
     geom_sf() +
     geom_sf(data = just_coords_new_sf, size = 4, shape = 23, fill = "darkred") +
     coord_sf(xlim = c(-84, -82), ylim = c(34, 36), expand = FALSE)
-  assert_that(is.ggplot(map_plot1))
+  assertthat::assert_that(is.ggplot(map_plot1))
   return(map_plot1)
 }
 
