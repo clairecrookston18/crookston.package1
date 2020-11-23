@@ -1,16 +1,16 @@
 Package: crookston.package1
-Title: Morphological and Geographical Data Analysis: Calculate Mean Head Volume by Population, Plot Populations to Map, and Using Species Info to Explore Phylogeny 
+Title: Morphological and Geographical Data Analysis: Calculate Mean Head Volume by Population, Plot Populations to Map, and Use Species Info to Explore Phylogeny 
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Claire",
            family = "Crookston",
            role = c("aut", "cre"),
            email = "claire.crookston@selu.edu")
-Description: This is an R package that allows the user to take a dataset (a tibble or data frame) that has specific column names to perform a few different
+Description: This is an R package that allows the user to take a dataset (a tibble or data frame) that has specific column names to perform a few different functions.
 Depends: 
-  R (> 3.0.0)
+  R (> 4.0.0)
 Imports:
-  tidyverse, mapview, assertthat
+  tidyverse, mapview, assertthat, rotl, rnaturalearth, ggplot2, na.tools, sf, magrittr
 Suggests:
   knitr, rmarkdown, testthat
 License: MIT
