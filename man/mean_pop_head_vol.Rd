@@ -3,9 +3,7 @@
 \name{mean_pop_head_vol}
 \alias{mean_pop_head_vol}
 \title{calculate mean head volume by population
-This function is starting small (really small) and will calculate the mean head volume
-for each population in the dataset 'measurements'. The input is the name of the dataset.
-The output is an object with the population and its associated mean head volume (mm).}
+This function will calculate the mean head volume for each population in the dataset 'measurements'.}
 \usage{
 mean_pop_head_vol(x)
 }
@@ -17,7 +15,5 @@ Pop_mean_vol which contains Population IDs and associated mean head volume (data
 }
 \description{
 calculate mean head volume by population
-This function is starting small (really small) and will calculate the mean head volume
-for each population in the dataset 'measurements'. The input is the name of the dataset.
-The output is an object with the population and its associated mean head volume (mm).
+This function will calculate the mean head volume for each population in the dataset 'measurements'.
 }

@@ -1,4 +1,5 @@
 # Crookston Package1
+# Morphological and Geographical Data Analysis: Calculate Mean Head Volume by Population, Plot Populations to Map, and Use Species Info to Explore Phylogeny
 ## Author: Claire Crookston
 ## The Purpose of This Package:
 ### This is an R package that manipulates and analyzes the data from a specific .csv file called ORIGDATAcorrect.csv. This .csv file is modified from the original created by Christopher K. Beachy and Dean C. Adams which is used in the published article "Historical Explanations of the Phenotypic Variation in the Plethodontid Salamander 'Gyrinophilus porphyriticus'". 
