@@ -4,7 +4,7 @@
 \alias{plot_map}
 \title{plot_map
 This function plots sample sites and population data onto a map to visualize population
-distributions of Gyrynophilus porphyriticus.}
+distributions of Gyrinophilus porphyriticus.}
 \usage{
 plot_map(x)
 }
@@ -17,5 +17,5 @@ map_plot1 the plot of the map with populations as red diamonds
 \description{
 plot_map
 This function plots sample sites and population data onto a map to visualize population
-distributions of Gyrynophilus porphyriticus.
+distributions of Gyrinophilus porphyriticus.
 }

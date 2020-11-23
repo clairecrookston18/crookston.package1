@@ -4,9 +4,7 @@
 \alias{build_phylo}
 \title{build_phylogenetic_tree
 This function takes the available trait and distribution data to create
-phylogentic topologies. (Not sure if this could be done with what I have, but
-it is worth a shot. Perhaps I can do this and/or get tree data from
-Open Tree of Life \link{rotl} and do some playing around).}
+phylogenetic topologies.}
 \usage{
 build_phylo(x)
 }
@@ -19,7 +17,5 @@ plot_sala_tree the phylogeny built from the 6 genera
 \description{
 build_phylogenetic_tree
 This function takes the available trait and distribution data to create
-phylogentic topologies. (Not sure if this could be done with what I have, but
-it is worth a shot. Perhaps I can do this and/or get tree data from
-Open Tree of Life \link{rotl} and do some playing around).
+phylogenetic topologies.
 }
