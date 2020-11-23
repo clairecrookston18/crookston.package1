@@ -48,7 +48,7 @@ measurements <- read_csv("../inst/extdata/ORIGDATAcorrect.csv")
 plot_map(measurements)
 ```
 
-## Building a phylogenetic tree of the tribes within Plethodontidae using the Open Tree of Life
+## Building a phylogenetic tree of genera within Plethodontidae using the Open Tree of Life
 
 This function does not use the ORIGDATAcorrect.csv dataset, however, it is able to take data available from the package "rotl" to find taxa to plot to a phyogenetic tree. This is a very basic use of that package that shows the evolutionary relationships between the Plethodontid genera: Gyrinophilus, Eurycea, Desmognathus, Plethodon, Hemidactylium, and Bolitoglossa. This function can be used for any list of taxa, but here it is particularly those 6 genera listed above.
 
