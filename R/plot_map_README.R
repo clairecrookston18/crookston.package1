@@ -1,7 +1,7 @@
 #'plot_map
 
 #'This function plots sample sites and population data onto a map to visualize population 
-#'distributions of Gyrynophilus porphyriticus.
+#'distributions of Gyrinophilus porphyriticus.
 
 #' @param x name of tibble 'measurements' (tibble, no default)
 #' @return map_plot1 the plot of the map with populations as red diamonds
